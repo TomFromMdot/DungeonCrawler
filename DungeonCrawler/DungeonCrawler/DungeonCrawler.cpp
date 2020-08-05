@@ -1,11 +1,15 @@
 ﻿// DungeonCrawler.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
-
-#include <iostream>
+#include "stdafx.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Window window(800, 600, "app");
+	window.init();
+	return 0;
+
+
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
