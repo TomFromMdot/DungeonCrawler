@@ -6,6 +6,7 @@ std::vector<Scene*>  SceneManager::sceneList = {};
 
 SceneManager::SceneManager()
 {
+
 }
 
 SceneManager::~SceneManager()
@@ -22,7 +23,6 @@ Scene * SceneManager::getSceneByID(int id)
 	for (int i = 0; i < SceneManager::sceneList.size(); i++)
 	{
 		if (SceneManager::sceneList[i]->getId() == id) {
-			
 			return SceneManager::sceneList[i];
 		}
 	}
@@ -34,8 +34,23 @@ int SceneManager::getSize()
 	return SceneManager::sceneList.size();
 }
 
-void SceneManager::render(int id)
+int SceneManager::getTargetSceneId()
+{
+	return targetScene->getId();
+}
+
+void SceneManager::setTargetScene(Scene * s)
+{
+	targetScene = s;
+}
+
+void SceneManager::render()
 {
 
-	getSceneByID(id)->renderScene();
+	targetScene->renderScene();
+}
+
+void SceneManager::changeTargetScene(int id)
+{
+	setTargetScene(getSceneByID(id));
 }

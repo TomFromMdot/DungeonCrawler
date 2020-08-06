@@ -13,7 +13,8 @@ Scene::~Scene()
 
 int Scene::getId()
 {
-	return id;
+	
+	return this->id;
 }
 
 void Scene::renderScene()

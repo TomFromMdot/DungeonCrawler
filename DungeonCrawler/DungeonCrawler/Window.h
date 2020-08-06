@@ -7,6 +7,7 @@
 
 
 #include "MainMenu.h"
+#include "TestLevel.h"
 
 class Window
 {
@@ -29,11 +30,12 @@ private:
 	std::string					_applicationName;
 	LevelManager*				_levelManager;
 	SceneManager*				_sceneManager;
-	static int					_currentScene;
+	static int					_currentSceneId;
+	Scene *						_targetScene;
 
 
 	MainMenu					states_MainMenu;
-
+	TestLevel					states_TestLevel;
 	/*LEVELS*/
 
 };

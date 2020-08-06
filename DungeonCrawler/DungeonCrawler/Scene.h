@@ -5,7 +5,7 @@ class Scene
 public:
 	Scene();
 	~Scene();
-	int getId();
+	virtual int getId();
 	virtual void renderScene();
 	
 private:

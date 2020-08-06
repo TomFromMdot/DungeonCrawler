@@ -10,10 +10,18 @@ public:
 	void pushToSceneList(Scene * s);
 	Scene * getSceneByID(int id);
 	int	getSize();
-	void render(int id);
+	int getTargetSceneId();
 
+
+	void setTargetScene(Scene * s);
+	void render();
+	void changeTargetScene(int id);
 
 private:
 	static std::vector<Scene*> sceneList;
+	Scene * targetScene;
+
+
+
 };
 
