@@ -3,6 +3,4 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
-
-#include "Window.h"
+#include <vector>
